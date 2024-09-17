@@ -41,6 +41,8 @@ def pix_confirmation():
 @app.route('/payments/pix/<int:payment_id>', methods=['GET'])
 def payment_pix_page(payment_id):
     return 'Pagamento pix'
+    payment = Payment.query.get(payment_id)
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
